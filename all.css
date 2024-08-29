@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'myfont';
+    src: url('font.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Ensure carousel images fill the container */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the space while maintaining aspect ratio */
+}
+
+@media (max-width: 767px) {
+    .carousel-item {
+        height: 400px; /* Set a fixed height for smaller screens */
+    }
+    
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the container */
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 200px; /* Set a smaller fixed height for extra small screens */
+    }
+    
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover; /* Ensure images cover the container */
+    }
+}
+h1 {
+    font-family: myfont;
+    color: red;
+    font-size: 3rem; /* Adjusted for responsiveness */
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 30px;
+}
+
+/* Position the navbar on top of the carousel */
+.navbar {
+    font-family: 'myfont';
+    src: url('font.ttf');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure navbar is above carousel */
+}
+
+/* Make sure the carousel is positioned correctly */
+.carousel {
+    position: relative;
+    z-index: 1; /* Ensure carousel is below navbar */
+}
+
+/* Styling for the carousel and images */
+.wid {
+    height: 500px;
+}
+.cim {
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    background: rgba(0,0,0,0.7) url("gg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: darken;
+}
+
+.im {
+    max-width: 100%;
+    height: auto;
+    float: right;
+    padding-right: 1%;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: white; /* Adjusted for better readability */
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: white; /* Adjusted for better readability */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.p {
+    color: red;
+    font-size: larger;
+    font-family: myfont;
+}
+
+.mark {
+    font-family: myfont;
+    color: red;
+    background-color: transparent;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 0%;
+    padding: 20px 0; /* Added padding for better spacing */
+}
+
+.footer h5 {
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-links,
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li,
+.footer-contact li {
+    margin-bottom: 10px;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ddd;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer h5 {
+        font-size: 1.1rem;
+    }
+
+    .footer p {
+        font-size: 0.9rem;
+    }
+
+    .card-container {
+        gap: 15px; /* Reduce gap on smaller screens */
+    }
+
+    .card {
+        max-width: 100%; /* Allow cards to use full width on smaller screens */
+    }
+
+    .marquee iframe {
+        width: 100%; /* Make iframes responsive */
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for very small screens */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.875rem; /* Smaller font size for navigation links */
+    }
+}
